@@ -1,7 +1,7 @@
 export const greet = () => {
-    console.log('hello')
-}
+  console.log("hello");
+};
 
 export const shout = (msg) => {
-    console.log(msg)
-}
+  console.log(msg);
+};
