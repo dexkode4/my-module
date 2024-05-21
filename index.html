@@ -12,14 +12,41 @@
   <body>
     <h1>hello</h1>
     <script type="module">
-      fetch("https://cdn.jsdelivr.net/gh/dexkode4/my-module/index.js")
-        .then((response) => {
-          console.log('response', response)
-        })
+      async function loadModule(url) {
+        try {
+          // Fetch the script content
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch script: ${response.statusText}`);
+          }
+          const scriptContent = await response.text();
 
-        import('./utils.js').then((module) => {
-            console.log(module)
-        })
+          // Create a Blob from the script content
+          const blob = new Blob([scriptContent], {
+            type: "application/javascript",
+          });
+
+          // Create a URL for the Blob
+          const scriptURL = URL.createObjectURL(blob);
+
+          // Dynamically import the module
+          const module = await import(scriptURL);
+
+          // Use the imported module
+          module.greet();
+        } catch (error) {
+          console.error("Error loading module:", error);
+        }
+      }
+
+      window.onload = () => {
+            loadModule('https://cdn.jsdelivr.net/gh/dexkode4/my-module/index.js');
+        };
+    //   fetch("https://cdn.jsdelivr.net/gh/dexkode4/my-module/func.js").then(
+    //     (response) => {
+    //       console.log("response", response);
+    //     }
+    //   );
     </script>
   </body>
 </html>
