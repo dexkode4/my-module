@@ -8,8 +8,3 @@ export const greet = () => {
 export const shout = (msg) => {
   console.log(msg);
 };
-
-module.exports = {
-  shout,
-  greet,
-};
