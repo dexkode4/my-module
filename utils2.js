@@ -1,1 +1,1 @@
-export * from './utils'
+export {greet} from './utils'
