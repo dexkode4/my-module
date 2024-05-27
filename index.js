@@ -1,10 +1,16 @@
 // import utils from './bundle'
 
-export const greet = () => {
+function greet(){
   console.log("hello");
 
 };
 
-export const shout = (msg) => {
+function shout(msg){
   console.log(msg);
 };
+
+function foo(){
+  return "foo";
+}
+
+export { foo, greet, shout };
