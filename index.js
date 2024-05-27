@@ -13,4 +13,4 @@ function foo(){
   return "foo";
 }
 
-export { foo, greet, shout };
+module.exports = { foo, greet, shout };
