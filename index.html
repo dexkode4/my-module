@@ -1,52 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- <script type="module" src="./index.js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- <script type="module" src="./index.js">
         greet()
     </script> -->
-  </head>
+</head>
 
-  <body>
-    <h1>hello</h1>
-    <script type="module">
-      async function loadModule(url) {
-        try {
-          // Fetch the script content
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Failed to fetch script: ${response.statusText}`);
-          }
-          const scriptContent = await response.text();
-
-          // Create a Blob from the script content
-          const blob = new Blob([scriptContent], {
-            type: "application/javascript",
-          });
-
-          // Create a URL for the Blob
-          const scriptURL = URL.createObjectURL(blob);
-
-          // Dynamically import the module
-          const module = await import(scriptURL);
-
-          // Use the imported module
-          console.log('module', module)
-        } catch (error) {
-          console.error("Error loading module:", error);
+<body>
+  <h1>hello</h1>
+  <script type="module">
+    async function loadModule(url) {
+      try {
+        // Fetch the script content
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch script: ${response.statusText}`);
         }
-      }
+        const scriptContent = await response.text();
 
-      window.onload = () => {
-            loadModule('https://cdn.jsdelivr.net/gh/dexkode4/my-module/bundle.js');
-        };
+        // Create a Blob from the script content
+        const blob = new Blob([scriptContent], {
+          type: "application/javascript",
+        });
+
+        // Create a URL for the Blob
+        const scriptURL = URL.createObjectURL(blob);
+
+        // Dynamically import the module
+        const module = await import(scriptURL);
+
+        // Use the imported module
+        console.log('module', module)
+      } catch (error) {
+        console.error("Error loading module:", error);
+      }
+    }
+
+    window.onload = () => {
+      loadModule('https://cdn.jsdelivr.net/gh/dexkode4/my-module/bundle.js');
+    };
     //   fetch("https://cdn.jsdelivr.net/gh/dexkode4/my-module/func.js").then(
     //     (response) => {
     //       console.log("response", response);
     //     }
     //   );
-    </script>
-  </body>
+  </script>
+
+  <div class="details-wrapper details-wrapper_rendered" data-type="details-wrapper">
+    <details data-opened="true" open="">
+      <summary>
+        <h2 data-block-id="cf371449-6151-4a72-ade8-96370998bcd5"
+          id="what-is-the-difference-between-an-early-alert-and-dispute">What is the difference between an Early Alert
+          and Dispute?</h2>
+      </summary>
+      <div data-type="details-content">
+        <p data-block-id="2f29bf51-8e05-4c22-8ed6-6c1a8c2faa21">Early Alert is a pre-dispute notification solution
+          offered by Payoneer, designed to help merchants to proactively resolve customer issues before they escalate
+          into chargebacks. If you refund the transaction based on these alerts, then chargeback is avoided. This helps
+          you reduce your chargeback rates which is a very important KPI to keep your business running smoothly. Whereas
+          a Dispute actually starts with the standard chargeback process wherein you are suppose to submit evidence
+          documents in case you disagree with it. Early Alert happens first and Disputes later in case you did not
+          refund the transaction based on the Early Alert. The sequence of Early Alerts and Dispute is explained in
+          detail in <a href="//checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow"
+            target="_blank" aria-label="Early Alerts | Early Alerts Process Flow - open in a new tab"
+            data-uw-rm-ext-link=""
+            uw-rm-external-link-id="https://checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow$earlyalerts|earlyalertsprocessflow"
+            data-uw-rm-brl="PR"
+            data-uw-original-href="https://checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow"><span
+              class="fabric-editor-annotation" type="spanMark">Early Alerts | Early Alerts Process Flow</span></a> <span
+            class="fabric-editor-annotation" type="spanMark">.&nbsp;</span>Note that, not all Disputes will have an
+          Early Alert as a previous event.</p>
+      </div>
+    </details><button class="details-arrow" type="details" aria-label="button" data-uw-rm-empty-ctrl=""></button>
+  </div>
+
+
+
+  <div class="details-wrapper details-wrapper_rendered" data-type="details-wrapper">
+    <details data-opened="true">
+      <summary>
+        <h2 data-block-id="cf371449-6151-4a72-ade8-96370998bcd5" id="拒付预警和拒付之间有什么区别？">拒付预警和拒付之间有什么区别？</h2>
+      </summary>
+      <div data-type="details-content">
+        <p data-block-id="2f29bf51-8e05-4c22-8ed6-6c1a8c2faa21">预警是 Payoneer 提供的一种争议前通知解决方案，旨在帮助商家在客户问题上升为拒付之前主动解决问题。
+          如果您根据这些预警为交易退款，则可以避免拒付。 这有助于降低您的拒付率，这是一项非常重要的关键绩效指标（KPI），可以确保您的业务顺利进行。
+          实际上，拒付是从标准的拒付流程开始的，这一流程中，如果您不同意拒付，则您应提交证据文件。 如果您没有根据拒付预警进行交易退款，则会先发出拒付预警，随后产生拒付。 拒付预警和拒付的顺序在<a
+            href="//checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow" target="_blank"
+            aria-label="拒付预警 | 拒付预警流程 中有详细解释 - 在新分頁中開啟" data-uw-rm-ext-link=""
+            uw-rm-external-link-id="https://checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow$拒付预警|拒付预警流程中有详细解释"
+            data-uw-rm-brl="PR"
+            data-uw-original-href="https://checkoutdocs.payoneer.com/docs/about-dispute-early-alerts#early-alerts-process-flow"><span
+              class="fabric-editor-annotation" type="spanMark">拒付预警 | 拒付预警流程</span>中有详细解释</a><span
+            class="fabric-editor-annotation" type="spanMark">。请注意，并非所有拒付都提前发出拒付预警。</span></p>
+      </div>
+    </details>
+  </div>
+
+
+
+</body>
+
 </html>
