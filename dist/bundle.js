@@ -6,7 +6,6 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var MyModule;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -17,7 +16,7 @@ var MyModule;
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   foo: () => (/* binding */ foo),\n/* harmony export */   greet: () => (/* binding */ greet),\n/* harmony export */   shout: () => (/* binding */ shout)\n/* harmony export */ });\nfunction greet(){\n  console.log(\"hello\");\n\n};\n\nfunction shout(msg){\n  console.log(msg);\n};\n\nfunction foo(){\n  return \"foo\";\n}\n\n//# sourceURL=webpack://MyModule/./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   foo: () => (/* binding */ foo),\n/* harmony export */   greet: () => (/* binding */ greet),\n/* harmony export */   shout: () => (/* binding */ shout)\n/* harmony export */ });\nfunction greet(){\n  console.log(\"hello\");\n\n};\n\nfunction shout(msg){\n  console.log(msg);\n};\n\nfunction foo(){\n  return \"foo\";\n}\n\n//# sourceURL=webpack://my-module/./index.js?");
 
 /***/ })
 
@@ -62,7 +61,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./index.js"](0, __webpack_exports__, __webpack_require__);
-/******/ 	MyModule = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;
