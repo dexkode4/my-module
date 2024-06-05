@@ -1,18 +1,12 @@
-function greet(){
+export function greet(){
   console.log("hello");
 
 };
 
-function shout(msg){
+export function shout(msg){
   console.log(msg);
 };
 
-function foo(){
+export function foo(){
   return "foo";
-}
-
-module.exports = {
-  greet,
-  foo,
-  shout
 }
